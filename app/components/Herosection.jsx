@@ -1,6 +1,16 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
-import { ChevronDown, Flag, ChevronUp } from "lucide-react";
+import {
+  ChevronDown,
+  Flag,
+  ChevronUp,
+  Gift,
+  MessageSquare,
+  Dot,
+  Share,
+  ChartNoAxesColumnIncreasing,
+  Bookmark,
+} from "lucide-react";
 
 const Herosection = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +46,7 @@ const Herosection = () => {
           <div className="relative mt-4 sm:mt-0 sm:ml-20" ref={dropdownRef}>
             <ChevronDown
               size={20}
-              className="text-slate-400 font-bold cursor-pointer mt-5 max-sm: mt-2"
+              className="text-slate-400 font-bold cursor-pointer mt-5 max-sm:mt-2"
               onClick={toggleDropdown}
             />
             {isOpen && (
@@ -123,6 +133,47 @@ const Herosection = () => {
               UPVOTE 158
             </a>
           </div>
+        </div>
+
+        <div className="flex flex-row max-sm:flex-col mt-10 mb-5">
+          <div className="flex">
+            <div className="flex justify-start align-middle text-orange-500">
+              <Gift size={22} />
+              <span className="font-normal ml-2">2 months free manually</span>
+            </div>
+            <div className="flex justify-start align-middle text-slate-500">
+              <Dot />
+              <span>Free Options</span>
+            </div>
+          </div>
+
+          <div className="flex ml-8 max-sm:ml-0 max-sm:mt-4">
+            <div className="flex justify-start align-middle text-slate-500 text-sm mr-2">
+              <MessageSquare size={18} />
+              <span className="ml-2">Dicuss</span>
+            </div>
+            <div className="flex justify-start align-middle  text-slate-500 text-sm mr-2">
+              <Bookmark size={18} />
+              <span className="ml-2">Collect</span>
+            </div>
+            <div className="flex justify-start align-middle  text-slate-500 text-sm mr-2">
+              <Share size={18} />
+              <span className="ml-2">Share</span>
+            </div>
+            <div className="flex justify-start align-middle  text-slate-500 text-sm mr-2">
+              <ChartNoAxesColumnIncreasing size={18} />
+              <span className="ml-2">Stats</span>
+            </div>
+          </div>
+        </div>
+
+        <p className="text-base pr-28 font-light text-black max-sm:pr-0">Translate video in one click with AI to 150+ languages & accents in original voice. Prime features: 1. 0.1 USD/min for premium video translation with voice cloning 2. Unlimited Editing 3. Exports MP4/SRT/MP3</p>
+
+        <div className="flex mt-3 max-sm:flex-wrap">
+          <p className="text-base font-light text-black max-sm:mb-3">Launched in</p>
+          <a href="" className="bg-slate-200 rounded-full px-4 mx-1 max-sm:mb-3">SaaS</a>
+          <a href="" className="bg-slate-200 rounded-full px-4 mr-1 max-sm:mb-3">Artificial Intelligence</a>
+          <a href="" className="bg-slate-200 rounded-full px-4 max-sm:mb-3">Video</a>
         </div>
       </div>
     </>
